@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cozy Match</title>
+        <link rel="stylesheet" href="style.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <audio id="background-music" src="sounds/lofi-rain.mp3" loop></audio>
+        <audio id="cat-sound" src="sounds/cat-sound.mp3" loop></audio>
+        <audio id="card-sound" src="sounds/card-sound.mp3"></audio>
+
+   <div class="game-screen">
+    
+    <button class="music-button" onclick="toggleMusic()">🔊</button>
+
+    <div class="start-screen">
+
+        <h1>COZY MATCH</h1>
+         <button onclick="startGame()">START</button>
+
+         </div>
+
+         <div class="game-board">
+           
+            <h2>CHOOSE TWO CARDS TO MATCH</h2>
+
+            <div class="card-grid">
+
+    <div class="card" data-image="images/coffee.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/coffee.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/leaf.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/leaf.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/cat.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/cat.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/sweater.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/sweater.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/books.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/books.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/fireplace.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/fireplace.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/coffee.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/coffee.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/leaf.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/leaf.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/cat.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/cat.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/sweater.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/sweater.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/books.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/books.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="card" data-image="images/fireplace.png">
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="images/card-back.png">
+            </div>
+            <div class="card-back">
+                <img src="images/fireplace.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="win-screen">
+    <div class="leaves"></div>
+
+    <h1>YOU FOUND ALL THE PAIRS!</h1>
+
+    <button onclick="restartGame()">PLAY AGAIN</button>
+
+    <button onclick="exitGame()">EXIT</button>
+
+</div>
+
+</div>
+
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
+

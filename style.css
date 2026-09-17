@@ -1,0 +1,185 @@
+/* CSS */
+
+body {
+background-color: #F5E6D3;
+ background-size: cover;
+ background-position: center;
+ min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    h1{
+        text-align:center;
+        font-size:50px;
+        font-family: 'Pixelify Sans', sans-serif;
+    }
+
+    button{
+        display: block;
+        margin: 30px auto; 
+        padding: 15px 40px;
+        font-size: 25px;
+        background-color: #C98B6B;
+        font-family: 'Pixelify Sans', sans-serif;
+        border: none;
+        border-radius: 15px;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+    button:active {
+        background-color: #B9785A;
+    }
+.game-screen {
+    position:relative;
+    width: 390px;
+    height: 700px;
+    margin: auto;
+    user-select: none;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 60px;
+    height: 75px;
+    background-color: #E6D0B5;
+    border: 3px solid #8B5E4A;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+   perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.card.flip .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.card-front img,
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.game-board {
+    display: none;
+}
+    
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.game-board h2 {
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+.win-screen {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-family: "Pixelify Sans", sans-serif;
+
+    padding-top: 120px;
+    box-sizing: border-box;
+}
+
+.win-screen h1 {
+    font-size: 35px;
+}
+
+.music-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    
+    width: 40px;
+    height: 40px;
+    
+    margin: 0;
+    padding: 0;
+    
+    font-size: 20px;
+    background-color: #E6D0B5;
+    border: 2px solid #8B5E4A;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.music-button:hover {
+    transform: scale(1.1);
+}
+
+.leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.leaf {
+    position: absolute;
+    top: -30px;
+    font-size: 25px;
+    animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(700px) rotate(360deg);
+    }
+}
